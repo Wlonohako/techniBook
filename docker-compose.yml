@@ -1,0 +1,29 @@
+services:
+  technibook:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mariadb
+    networks:
+      - db-network
+
+  mariadb:
+    image: mariadb:latest
+    restart: always
+    volumes:
+      - db:/var/lib/mysql
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    networks:
+      - db-network
+
+volumes:
+  db:
+    driver: local
+
+networks:
+  db-network:
+    driver: bridge
