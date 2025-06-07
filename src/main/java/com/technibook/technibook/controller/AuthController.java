@@ -21,14 +21,14 @@ public class AuthController {
     private final AuthService authService;
 
     @PostMapping("/register")
-    public ResponseEntity<Void> register(@RequestBody RegisterUserRequest request) {
-        authService.register(request);
-        return ResponseEntity.status(HttpStatus.CREATED).build();
+    public ResponseEntity<RegisterUserRequest> register(@RequestBody RegisterUserRequest request) {
+        RegisterUserRequest response = authService.registerUser(request);
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
     @PostMapping("/login")
     public ResponseEntity<AuthResponse> login(@RequestBody LoginRequest request) {
-        AuthResponse response = authService.login(request);
+        AuthResponse response = authService.loginUser(request);
         return ResponseEntity.ok(response);
     }
 }
