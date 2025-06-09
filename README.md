@@ -103,12 +103,12 @@ Technibook is designed to serve as a modern social networking platform that impl
 
 ---
 
-### 📥 Messages (WebSocket)
+~~### 📥 Messages (WebSocket)~~
 
-**WebSocket Endpoint:** `/ws/chat`
+~~**WebSocket Endpoint:** `/ws/chat`~~
 
--   Users can connect via WebSocket using their JWT token
--   After connection, send message payloads:
+-   ~~Users can connect via WebSocket using their JWT token~~
+-   ~~After connection, send message payloads:~~
     ```json
     {
         "receiverId": 5,
