@@ -48,4 +48,9 @@ public class Group {
     protected void onUpdate() {
         this.updatedAt = LocalDateTime.now();
     }
+
+    public Group orElseThrow(Object object) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'orElseThrow'");
+    }
 }
