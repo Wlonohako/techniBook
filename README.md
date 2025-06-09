@@ -120,7 +120,7 @@ Technibook is designed to serve as a modern social networking platform that impl
 
 -   **Spring Boot** – Java-based backend framework for building REST APIs
 -   **MySQL** – Relational database for persistent data storage
--   **WebSocket** – Enables real-time chat functionality
+-   ~~**WebSocket** – Enables real-time chat functionality~~
 -   **Docker** – Containerization for consistent deployment
 -   **JWT (JSON Web Token)** – Secure authentication mechanism
 
